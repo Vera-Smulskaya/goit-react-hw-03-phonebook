@@ -8,9 +8,13 @@ export default class ContactList extends Component {
     const { contacts, deleteContact } = this.props;
     return (
       <div className={css.contactListContainer}>
-         <Title>Contacts</Title>
+        <Title>Contacts</Title>
         {contacts.map(contact => (
-          <ContactListItem contact={contact} key={contact.id} deleteContact={deleteContact}/>
+          <ContactListItem
+            contact={contact}
+            key={contact.id}
+            deleteContact={deleteContact}
+          />
         ))}
       </div>
     );
